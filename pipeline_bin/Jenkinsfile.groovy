@@ -5,7 +5,7 @@ node('linux') {
 
   stage('Prepare Workspace') {
     dir('demo-sources') {
-      git url: '', branch: ''
+      git url: 'https://github.com/mramanathan/osfy-pipeline-demo.git', branch: 'master'
     }
   }
 
@@ -16,6 +16,9 @@ node('linux') {
   }
 
   stage('Archive') {
+    dir('demo-sources') {
+      archive excludes: '*.txt', includes: 'pipimage'
+    }
   }
 
 }
