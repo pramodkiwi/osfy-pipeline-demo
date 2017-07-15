@@ -1,2 +1,2 @@
-# osfy-pipeline-demo
-Pipeline examples for OSFY article
+# osfy-pipeline-demo #
+Jenkins Pipeline examples for OSFY article
