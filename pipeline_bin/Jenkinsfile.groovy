@@ -1,6 +1,8 @@
 node('linux') {
   stage('Clean Start') {
-    deleteDir()
+    dir('demo-sources') {
+      deleteDir()
+    }
   }
 
   stage('Prepare Workspace') {
