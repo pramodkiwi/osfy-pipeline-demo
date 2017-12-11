@@ -1,4 +1,4 @@
-node('linux') {
+node {
   stage('Clean Start') {
     dir('demo-sources') {
       deleteDir()
@@ -7,7 +7,7 @@ node('linux') {
 
   stage('Prepare Workspace') {
     dir('demo-sources') {
-      git url: 'https://github.com/mramanathan/osfy-pipeline-demo.git', branch: 'master'
+      git url: 'https://github.com/pramodkiwi/osfy-pipeline-demo.git', branch: 'master'
     }
   }
 
